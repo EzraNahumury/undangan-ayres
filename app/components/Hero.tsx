@@ -67,8 +67,7 @@ export default function Hero() {
     <section className="relative min-h-screen w-full overflow-hidden bg-white">
       {/* Video Background */}
       <div
-        className="absolute z-0"
-        style={{ top: "300px", inset: "auto 0 0 0", position: "absolute" }}
+        className="absolute inset-x-0 bottom-0 z-0 top-[150px] sm:top-[200px] md:top-[300px]"
       >
         <video
           ref={videoRef}

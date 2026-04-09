@@ -94,7 +94,7 @@ export default function RSVPForm() {
       <dialog
         ref={dialogRef}
         onClose={handleClose}
-        className="m-0 w-full max-w-lg rounded-t-3xl bg-white p-0 shadow-2xl backdrop:bg-black/50 backdrop:backdrop-blur-sm sm:m-auto sm:rounded-2xl"
+        className="mt-auto mb-0 w-full max-w-lg rounded-t-3xl bg-white p-0 shadow-2xl backdrop:bg-black/50 backdrop:backdrop-blur-sm sm:my-auto sm:rounded-2xl"
       >
         <div className="p-6 sm:p-8">
           {/* Header */}
