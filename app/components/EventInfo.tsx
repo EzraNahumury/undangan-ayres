@@ -1,0 +1,97 @@
+const details = [
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+      </svg>
+    ),
+    label: "Tanggal",
+    value: "Sabtu, 26 April 2026",
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    label: "Waktu",
+    value: "16:00 — 21:00 WIB",
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+      </svg>
+    ),
+    label: "Lokasi",
+    value: "Ayres Apparel Store, Jl. Sudirman No. 123, Jakarta",
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+      </svg>
+    ),
+    label: "Dress Code",
+    value: "Smart Casual",
+  },
+];
+
+export default function EventInfo() {
+  return (
+    <section id="event" className="bg-white px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-4xl">
+        {/* Section header */}
+        <div className="mb-16 text-center">
+          <p className="font-serif text-sm italic text-gray">
+            Detail Acara
+          </p>
+          <h2 className="mt-2 font-serif text-4xl text-black sm:text-5xl">
+            Informasi Event
+          </h2>
+          <div className="mx-auto mt-6 h-px w-16 bg-gray-light" />
+        </div>
+
+        {/* Detail cards */}
+        <div className="grid gap-4 sm:grid-cols-2">
+          {details.map((item) => (
+            <div
+              key={item.label}
+              className="group rounded-2xl border border-gray-light bg-white p-6 transition-all duration-300 hover:border-black/10 hover:shadow-lg hover:shadow-black/5"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gray-lighter text-gray transition-colors group-hover:bg-black group-hover:text-white">
+                {item.icon}
+              </div>
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray">
+                {item.label}
+              </p>
+              <p className="mt-1 text-base font-medium text-black">
+                {item.value}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Google Maps */}
+        <div id="lokasi" className="mt-16 scroll-mt-24">
+          <div className="overflow-hidden rounded-2xl border border-gray-light shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJl.%20Jend.%20Sudirman%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Ayres Apparel"
+            />
+          </div>
+          <p className="mt-3 text-center text-sm text-gray">
+            Jl. Sudirman No. 123, Jakarta Pusat
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
