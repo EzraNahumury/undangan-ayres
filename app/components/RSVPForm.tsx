@@ -82,12 +82,18 @@ export default function RSVPForm() {
           Be part of the grand opening of Ayres Solo — the home of custom
           jerseys with a cut that's in a class of its own.
         </p>
-        <button
-          onClick={() => setOpen(true)}
-          className="mt-10 rounded-full bg-black px-14 py-5 text-base font-medium text-white transition-transform hover:scale-103"
-        >
-          RSVP Now
-        </button>
+        <div className="relative mt-10 inline-block">
+          {/* Pulsing ring */}
+          <span className="animate-btn-ring absolute inset-0 rounded-full bg-black" />
+          <button
+            onClick={() => setOpen(true)}
+            className="relative overflow-hidden rounded-full bg-black px-14 py-5 text-base font-medium text-white transition-transform hover:scale-103"
+          >
+            {/* Shimmer sweep */}
+            <span className="animate-btn-shimmer pointer-events-none absolute inset-y-0 w-1/3 bg-white/15 blur-sm" />
+            RSVP Now
+          </button>
+        </div>
       </div>
 
       {/* Modal */}

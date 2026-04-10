@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Particle Background */}
       <div className="absolute inset-0 z-0">
         <Particles
-          particleColors={["#ffffff", "#C8A96E", "#D4BA85"]}
+          particleColors={["#ffffff", "#E8192C", "#ffffff"]}
           particleCount={200}
           particleSpread={10}
           speed={0.1}
@@ -74,21 +74,27 @@ export default function Hero() {
         className="relative z-10 flex flex-col items-center justify-center px-6 pb-40 text-center"
         style={{ paddingTop: "calc(8rem - 75px)" }}
       >
+        {/* Invitation label */}
+        <p className="animate-fade-rise mb-6 font-serif text-sm italic text-white/50 sm:text-base">
+          You are cordially invited to the Grand Opening of
+        </p>
+
         {/* Headline */}
         <h1
           className="animate-fade-rise max-w-7xl font-serif text-5xl font-normal text-white sm:text-7xl md:text-8xl"
           style={{ lineHeight: 0.95, letterSpacing: "-2.46px" }}
         >
-          Custom jerseys,{" "}
-          <em className="text-white/50">a cut above</em>
+          Ayres Apparel{" "}
+          <em className="text-red">Solo —</em>
           <br />
-          <em className="text-white/50">the rest.</em>
+          <em className="text-red">now open.</em>
         </h1>
 
-        {/* Description */}
+        {/* Invitation copy */}
         <p className="animate-fade-rise-delay mt-8 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-          Ayres is now in Solo — the home of custom jerseys crafted with
-          genuine Indonesian character and a pattern that sets us apart.
+          We warmly invite you to celebrate the opening of our Solo branch.
+          Come experience custom jerseys crafted with genuine Indonesian
+          character — where every pattern is a class of its own.
         </p>
 
         {/* Date Badge */}
@@ -96,17 +102,23 @@ export default function Hero() {
           <span className="text-sm font-medium text-white">
             April 26, 2026
           </span>
-          <span className="h-1 w-1 rounded-full bg-white/40" />
+          <span className="h-1 w-1 rounded-full bg-red" />
           <span className="text-sm text-white/60">4:00 PM WIB</span>
         </div>
 
         {/* CTA */}
-        <a
-          href="#rsvp"
-          className="animate-fade-rise-delay-2 mt-12 rounded-full bg-white px-14 py-5 text-base text-black transition-transform hover:scale-103"
-        >
-          Confirm Attendance
-        </a>
+        <div className="animate-fade-rise-delay-2 relative mt-12 inline-block">
+          {/* Pulsing ring */}
+          <span className="animate-btn-ring absolute inset-0 rounded-full bg-red" />
+          <a
+            href="#rsvp"
+            className="relative block overflow-hidden rounded-full bg-red px-14 py-5 text-base text-white transition-transform hover:scale-103"
+          >
+            {/* Shimmer sweep */}
+            <span className="animate-btn-shimmer pointer-events-none absolute inset-y-0 w-1/3 bg-white/25 blur-sm" />
+            Confirm Attendance
+          </a>
+        </div>
       </div>
     </section>
   );
