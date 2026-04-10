@@ -77,7 +77,7 @@ export default function EventInfo() {
         <div id="lokasi" className="mt-16 scroll-mt-24">
           <div className="overflow-hidden rounded-2xl border border-gray-light shadow-sm">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJl.%20Jend.%20Sudirman%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
+              src="https://maps.google.com/maps?q=-7.554426,110.7698951&z=17&output=embed"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -87,9 +87,14 @@ export default function EventInfo() {
               title="Lokasi Ayres Apparel"
             />
           </div>
-          <p className="mt-3 text-center text-sm text-gray">
-            Jl. Sudirman No. 123, Jakarta Pusat
-          </p>
+          <a
+            href="https://maps.app.goo.gl/m4yUtfnY2pK8vkPV6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 block text-center text-sm text-gray hover:text-black transition-colors"
+          >
+            Perempatan Menco — Buka di Google Maps ↗
+          </a>
         </div>
       </div>
     </section>
