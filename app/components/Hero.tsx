@@ -6,7 +6,7 @@ import Particles from "./Particles";
 const NAV_ITEMS = [
   { label: "Home", href: "#", active: true },
   { label: "Event", href: "#event" },
-  { label: "Lokasi", href: "#lokasi" },
+  { label: "Location", href: "#lokasi" },
   { label: "RSVP", href: "#rsvp" },
 ];
 
@@ -65,7 +65,7 @@ export default function Hero() {
           href="#rsvp"
           className="rounded-full bg-white px-6 py-2.5 text-sm text-black transition-transform hover:scale-103"
         >
-          Konfirmasi
+          RSVP
         </a>
       </nav>
 
@@ -79,26 +79,25 @@ export default function Hero() {
           className="animate-fade-rise max-w-7xl font-serif text-5xl font-normal text-white sm:text-7xl md:text-8xl"
           style={{ lineHeight: 0.95, letterSpacing: "-2.46px" }}
         >
-          Beyond fashion,{" "}
-          <em className="text-white/50">we craft</em>
+          Custom jerseys,{" "}
+          <em className="text-white/50">a cut above</em>
           <br />
-          <em className="text-white/50">the timeless.</em>
+          <em className="text-white/50">the rest.</em>
         </h1>
 
         {/* Description */}
         <p className="animate-fade-rise-delay mt-8 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-          Kami dengan bangga mengundang Anda ke grand opening store pertama
-          kami. Sebuah ruang baru untuk gaya, kreativitas, dan jiwa yang
-          autentik.
+          Ayres is now in Solo — the home of custom jerseys crafted with
+          genuine Indonesian character and a pattern that sets us apart.
         </p>
 
         {/* Date Badge */}
         <div className="animate-fade-rise-delay mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-sm">
           <span className="text-sm font-medium text-white">
-            26 April 2026
+            April 26, 2026
           </span>
           <span className="h-1 w-1 rounded-full bg-white/40" />
-          <span className="text-sm text-white/60">16:00 WIB</span>
+          <span className="text-sm text-white/60">4:00 PM WIB</span>
         </div>
 
         {/* CTA */}
@@ -106,7 +105,7 @@ export default function Hero() {
           href="#rsvp"
           className="animate-fade-rise-delay-2 mt-12 rounded-full bg-white px-14 py-5 text-base text-black transition-transform hover:scale-103"
         >
-          Konfirmasi Kehadiran
+          Confirm Attendance
         </a>
       </div>
     </section>

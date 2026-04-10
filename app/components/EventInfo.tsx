@@ -5,8 +5,8 @@ const details = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
       </svg>
     ),
-    label: "Tanggal",
-    value: "Sabtu, 26 April 2026",
+    label: "Date",
+    value: "Saturday, April 26, 2026",
   },
   {
     icon: (
@@ -14,8 +14,8 @@ const details = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    label: "Waktu",
-    value: "16:00 — 21:00 WIB",
+    label: "Time",
+    value: "4:00 PM — 9:00 PM WIB",
   },
   {
     icon: (
@@ -24,8 +24,8 @@ const details = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
       </svg>
     ),
-    label: "Lokasi",
-    value: "Ayres Apparel Store, Jl. Sudirman No. 123, Jakarta",
+    label: "Location",
+    value: "Ayres Apparel Solo, Perempatan Menco",
   },
   {
     icon: (
@@ -45,10 +45,10 @@ export default function EventInfo() {
         {/* Section header */}
         <div className="mb-16 text-center">
           <p className="font-serif text-sm italic text-gray">
-            Detail Acara
+            Grand Opening — Solo
           </p>
           <h2 className="mt-2 font-serif text-4xl text-black sm:text-5xl">
-            Informasi Event
+            Event Details
           </h2>
           <div className="mx-auto mt-6 h-px w-16 bg-gray-light" />
         </div>
@@ -84,7 +84,7 @@ export default function EventInfo() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Lokasi Ayres Apparel"
+              title="Ayres Apparel Solo Location"
             />
           </div>
           <a
@@ -93,7 +93,7 @@ export default function EventInfo() {
             rel="noopener noreferrer"
             className="mt-3 block text-center text-sm text-gray hover:text-black transition-colors"
           >
-            Perempatan Menco — Buka di Google Maps ↗
+            Perempatan Menco — Open in Google Maps ↗
           </a>
         </div>
       </div>

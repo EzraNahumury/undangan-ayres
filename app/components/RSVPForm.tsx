@@ -51,11 +51,11 @@ export default function RSVPForm() {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Gagal mengirim data");
+      if (!res.ok) throw new Error("Failed to submit");
 
       setSubmitted(true);
     } catch {
-      setError("Terjadi kesalahan. Silakan coba lagi.");
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -73,20 +73,20 @@ export default function RSVPForm() {
     <section id="rsvp" className="scroll-mt-12 bg-gray-lighter px-6 py-24 text-center sm:py-32">
       <div className="mx-auto max-w-xl">
         <p className="font-serif text-sm italic text-gray">
-          Konfirmasi Kehadiran
+          Confirm Your Attendance
         </p>
         <h2 className="mt-2 font-serif text-4xl text-black sm:text-5xl">
-          Apakah Anda Hadir?
+          Will You Be There?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-gray">
-          Kami sangat menantikan kehadiran Anda di acara grand opening kami.
-          Mohon konfirmasi kehadiran Anda.
+          Be part of the grand opening of Ayres Solo — the home of custom
+          jerseys with a cut that's in a class of its own.
         </p>
         <button
           onClick={() => setOpen(true)}
           className="mt-10 rounded-full bg-black px-14 py-5 text-base font-medium text-white transition-transform hover:scale-103"
         >
-          Konfirmasi Sekarang
+          RSVP Now
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export default function RSVPForm() {
           {/* Header */}
           <div className="mb-6 flex items-center justify-between">
             <h3 className="font-serif text-2xl text-black">
-              {submitted ? "Terima Kasih!" : "Form RSVP"}
+              {submitted ? "Thank You!" : "RSVP Form"}
             </h3>
             <button
               onClick={handleClose}
@@ -120,27 +120,27 @@ export default function RSVPForm() {
                 </svg>
               </div>
               <p className="text-lg font-medium text-black">
-                Data Anda telah terkirim
+                Your response has been received
               </p>
               <p className="mt-2 text-sm text-gray">
-                Sampai jumpa di acara grand opening!
+                See you at the grand opening!
               </p>
               <button
                 onClick={handleClose}
                 className="mt-6 rounded-full bg-black px-8 py-3 text-sm font-medium text-white transition-transform hover:scale-103"
               >
-                Tutup
+                Close
               </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Nama */}
+              {/* Full Name */}
               <div className="text-left">
                 <label
                   htmlFor="nama"
                   className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray"
                 >
-                  Nama Lengkap
+                  Full Name
                 </label>
                 <input
                   id="nama"
@@ -149,7 +149,7 @@ export default function RSVPForm() {
                   required
                   value={form.nama}
                   onChange={handleChange}
-                  placeholder="Masukkan nama Anda"
+                  placeholder="Enter your name"
                   className="w-full rounded-xl border border-gray-light bg-white px-4 py-3 text-sm text-black placeholder:text-gray/50 focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10"
                 />
               </div>
@@ -169,18 +169,18 @@ export default function RSVPForm() {
                   required
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="nama@email.com"
+                  placeholder="name@email.com"
                   className="w-full rounded-xl border border-gray-light bg-white px-4 py-3 text-sm text-black placeholder:text-gray/50 focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10"
                 />
               </div>
 
-              {/* No HP */}
+              {/* Phone */}
               <div className="text-left">
                 <label
                   htmlFor="noHp"
                   className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray"
                 >
-                  No. HP / WhatsApp
+                  Phone / WhatsApp
                 </label>
                 <input
                   id="noHp"
@@ -194,13 +194,13 @@ export default function RSVPForm() {
                 />
               </div>
 
-              {/* Asal */}
+              {/* Origin */}
               <div className="text-left">
                 <label
                   htmlFor="asal"
                   className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray"
                 >
-                  Asal
+                  Origin
                 </label>
                 <input
                   id="asal"
@@ -209,15 +209,15 @@ export default function RSVPForm() {
                   required
                   value={form.asal}
                   onChange={handleChange}
-                  placeholder="Komunitas / Organisasi / Perusahaan"
+                  placeholder="Community / Organization / Company"
                   className="w-full rounded-xl border border-gray-light bg-white px-4 py-3 text-sm text-black placeholder:text-gray/50 focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10"
                 />
               </div>
 
-              {/* Kehadiran */}
+              {/* Attendance */}
               <div className="text-left">
                 <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray">
-                  Kehadiran
+                  Attendance
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   <label
@@ -239,7 +239,7 @@ export default function RSVPForm() {
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    Hadir
+                    Attending
                   </label>
                   <label
                     className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium transition-all ${
@@ -259,7 +259,7 @@ export default function RSVPForm() {
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    Tidak Hadir
+                    Not Attending
                   </label>
                 </div>
               </div>
@@ -281,10 +281,10 @@ export default function RSVPForm() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                     </svg>
-                    Mengirim...
+                    Sending...
                   </span>
                 ) : (
-                  "Kirim RSVP"
+                  "Send RSVP"
                 )}
               </button>
             </form>

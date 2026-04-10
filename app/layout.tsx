@@ -16,13 +16,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Ayres Apparel — Grand Opening",
+  title: "Ayres Apparel — Grand Opening Solo",
   description:
-    "You're invited to the Grand Opening of Ayres Apparel. Join us for an unforgettable experience.",
+    "You're invited to the Grand Opening of Ayres Apparel Solo. Join us for an unforgettable experience.",
   openGraph: {
-    title: "Ayres Apparel — Grand Opening",
+    title: "Ayres Apparel — Grand Opening Solo",
     description:
-      "You're invited to the Grand Opening of Ayres Apparel.",
+      "You're invited to the Grand Opening of Ayres Apparel Solo.",
     type: "website",
   },
 };
