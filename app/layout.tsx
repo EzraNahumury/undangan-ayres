@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ayres Apparel — Grand Opening Solo",
+  title: "Grand Opening Ayres",
   description:
     "You're invited to the Grand Opening of Ayres Apparel Solo. Join us for an unforgettable experience.",
   openGraph: {
-    title: "Ayres Apparel — Grand Opening Solo",
+    title: "Grand Opening Ayres",
     description:
       "You're invited to the Grand Opening of Ayres Apparel Solo.",
     type: "website",
