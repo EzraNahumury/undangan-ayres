@@ -100,10 +100,10 @@ export default function Hero() {
         {/* Date Badge */}
         <div className="animate-fade-rise-delay mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-sm">
           <span className="text-sm font-medium text-white">
-            April 26, 2026
+            May 1, 2026
           </span>
           <span className="h-1 w-1 rounded-full bg-red" />
-          <span className="text-sm text-white/60">4:00 PM WIB</span>
+          <span className="text-sm text-white/60">10:00 WIB</span>
         </div>
 
         {/* CTA */}

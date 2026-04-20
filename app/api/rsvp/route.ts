@@ -80,7 +80,7 @@ function buildInvitationEmail(nama: string): string {
                             Date
                           </p>
                           <p style="margin:0;font-size:15px;color:#ffffff;font-weight:500;">
-                            Saturday, April 26, 2026
+                            Friday, May 1, 2026
                           </p>
                         </td>
                       </tr>
@@ -90,7 +90,7 @@ function buildInvitationEmail(nama: string): string {
                             Time
                           </p>
                           <p style="margin:0;font-size:15px;color:#ffffff;font-weight:500;">
-                            4:00 PM — 9:00 PM WIB
+                            10:00 WIB — selesai
                           </p>
                         </td>
                       </tr>
@@ -103,7 +103,7 @@ function buildInvitationEmail(nama: string): string {
                             Ayres Apparel Solo
                           </p>
                           <p style="margin:4px 0 0;font-size:13px;color:#888888;">
-                            Perempatan Menco, Solo
+                            Ruko Menco City, Solo
                           </p>
                         </td>
                       </tr>

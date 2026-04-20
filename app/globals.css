@@ -23,8 +23,8 @@
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-instrument);
+  --font-sans: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 html {
@@ -34,7 +34,7 @@ html {
 body {
   background: var(--background);
   color: var(--black);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── Animations ── */
