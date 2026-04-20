@@ -140,6 +140,17 @@ export default function RSVPForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Note */}
+              <div className="flex items-start gap-2 rounded-xl border border-gray-light bg-gray-lighter px-4 py-3 text-left">
+                <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                </svg>
+                <p className="text-xs leading-relaxed text-gray">
+                  <span className="font-semibold text-black">Note:</span>{" "}
+                  Undangan ini berlaku untuk <span className="font-semibold text-black">1 orang</span>.
+                </p>
+              </div>
+
               {/* Full Name */}
               <div className="text-left">
                 <label
