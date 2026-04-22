@@ -10,7 +10,7 @@
  *    - Who has access: Anyone
  * 4. Copy URL deployment, simpan di .env.local sebagai GOOGLE_SCRIPT_URL
  * 5. Pastikan Sheet pertama memiliki header di row 1:
- *    | Timestamp | Nama | Email | No HP | Asal | Kehadiran |
+ *    | Timestamp | Nama | Email | No HP | Asal | Kehadiran | Size Jersey |
  */
 
 function doPost(e) {
@@ -25,6 +25,7 @@ function doPost(e) {
       data.noHp,          // No HP
       data.asal,          // Asal (Komunitas/Organisasi)
       data.kehadiran,     // Kehadiran (hadir / tidak)
+      data.sizeJersey,     // Size Jersey
     ]);
 
     return ContentService

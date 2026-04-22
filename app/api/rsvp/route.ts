@@ -144,7 +144,7 @@ function buildInvitationEmail(nama: string): string {
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const { nama, email, noHp, asal, kehadiran } = body;
+  const { nama, email, noHp, asal, kehadiran, sizeJersey } = body;
 
   if (!nama || !email || !noHp || !asal || !kehadiran) {
     return NextResponse.json({ error: "Data tidak lengkap" }, { status: 400 });
@@ -158,7 +158,7 @@ export async function POST(request: Request) {
   const res = await fetch(SCRIPT_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ nama, email, noHp, asal, kehadiran }),
+    body: JSON.stringify({ nama, email, noHp, asal, kehadiran, sizeJersey }),
   });
 
   if (!res.ok) {

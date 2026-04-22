@@ -8,6 +8,7 @@ type FormData = {
   noHp: string;
   asal: string;
   kehadiran: "hadir" | "tidak" | "";
+  sizeJersey: "S" | "M" | "L" | "XL" | "";
 };
 
 export default function RSVPForm() {
@@ -23,6 +24,7 @@ export default function RSVPForm() {
     noHp: "",
     asal: "",
     kehadiran: "",
+    sizeJersey: "",
   });
 
   useEffect(() => {
@@ -65,7 +67,7 @@ export default function RSVPForm() {
     setOpen(false);
     if (submitted) {
       setSubmitted(false);
-      setForm({ nama: "", email: "", noHp: "", asal: "", kehadiran: "" });
+      setForm({ nama: "", email: "", noHp: "", asal: "", kehadiran: "", sizeJersey: "" });
     }
   }
 
@@ -80,7 +82,7 @@ export default function RSVPForm() {
         </h2>
         <p className="mt-4 text-base leading-relaxed text-gray">
           Be part of the grand opening of Ayres Solo — the home of custom
-          jerseys with a cut that's in a class of its own.
+          jerseys with a cut that&apos;s in a class of its own.
         </p>
         <div className="relative mt-10 inline-block">
           {/* Pulsing ring */}
@@ -229,6 +231,30 @@ export default function RSVPForm() {
                   placeholder="Community / Organization / Company"
                   className="w-full rounded-xl border border-gray-light bg-white px-4 py-3 text-sm text-black placeholder:text-gray/50 focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10"
                 />
+              </div>
+
+              {/* Size Jersey */}
+              <div className="text-left">
+                <label
+                  htmlFor="sizeJersey"
+                  className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray"
+                >
+                  Jersey Size
+                </label>
+                <select
+                  id="sizeJersey"
+                  name="sizeJersey"
+                  required
+                  value={form.sizeJersey}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-gray-light bg-white px-4 py-3 text-sm text-black focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10"
+                >
+                  <option value="">Select size</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
               </div>
 
               {/* Attendance */}
