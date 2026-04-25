@@ -76,7 +76,7 @@ export default function Hero() {
       >
         {/* Invitation label */}
         <p className="animate-fade-rise mb-6 font-serif text-sm italic text-white/50 sm:text-base">
-          You are cordially invited to the Grand Opening of
+          You are cordially invited to the Soft Opening of
         </p>
 
         {/* Headline */}

@@ -34,7 +34,7 @@ function buildInvitationEmail(nama: string): string {
           <tr>
             <td align="center" style="padding:48px 40px 32px;">
               <p style="margin:0;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
-                Grand Opening Invitation
+                Soft Opening Invitation
               </p>
             </td>
           </tr>
@@ -56,7 +56,7 @@ function buildInvitationEmail(nama: string): string {
                 ${nama}
               </h1>
               <p style="margin:0 0 24px;font-size:15px;line-height:1.8;color:#aaaaaa;">
-                You are cordially invited to the <strong style="color:#ffffff;">Grand Opening</strong>
+                You are cordially invited to the <strong style="color:#ffffff;">Soft Opening</strong>
                 of Ayres Apparel Solo — the home of custom jerseys crafted with genuine
                 Indonesian character, where every pattern is a class of its own.
               </p>
@@ -170,7 +170,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"Ayres Apparel Solo" <${process.env.SMTP_FROM}>`,
       to: email,
-      subject: "Your Invitation — Ayres Apparel Grand Opening Solo",
+      subject: "Your Invitation — Ayres Apparel Soft Opening Solo",
       html: buildInvitationEmail(nama),
     });
   }

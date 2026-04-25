@@ -31,17 +31,17 @@ const details = [
 
 export default function EventInfo() {
   return (
-    <section id="event" className="bg-white px-6 py-24 sm:py-32">
+    <section id="event" className="bg-transparent px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="font-serif text-sm italic text-gray">
-            Grand Opening — Solo
+          <p className="font-serif text-sm italic text-white/50">
+            Soft Opening — Solo
           </p>
-          <h2 className="mt-2 font-serif text-4xl text-black sm:text-5xl">
+          <h2 className="mt-2 font-serif text-4xl text-white sm:text-5xl">
             Event Details
           </h2>
-          <div className="mx-auto mt-6 h-px w-16 bg-gray-light" />
+          <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
         </div>
 
         {/* Detail cards */}
@@ -49,15 +49,15 @@ export default function EventInfo() {
           {details.map((item) => (
             <div
               key={item.label}
-              className="group rounded-2xl border border-gray-light bg-white p-6 transition-all duration-300 hover:border-black/10 hover:shadow-lg hover:shadow-black/5"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:shadow-lg hover:shadow-black/20"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gray-lighter text-gray transition-colors group-hover:bg-black group-hover:text-white">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-black">
                 {item.icon}
               </div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/50">
                 {item.label}
               </p>
-              <p className="mt-1 text-base font-medium text-black">
+              <p className="mt-1 text-base font-medium text-white">
                 {item.value}
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function EventInfo() {
 
         {/* Google Maps */}
         <div id="lokasi" className="mt-16 scroll-mt-24">
-          <div className="overflow-hidden rounded-2xl border border-gray-light shadow-sm">
+          <div className="overflow-hidden rounded-2xl border border-white/10 shadow-sm">
             <iframe
               src="https://maps.google.com/maps?q=-7.554426,110.7698951&z=17&output=embed"
               width="100%"
@@ -82,7 +82,7 @@ export default function EventInfo() {
             href="https://maps.app.goo.gl/m4yUtfnY2pK8vkPV6"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 block text-center text-sm text-gray hover:text-black transition-colors"
+            className="mt-3 block text-center text-sm text-white/50 hover:text-white transition-colors"
           >
             Ruko Menco City — Open in Google Maps ↗
           </a>

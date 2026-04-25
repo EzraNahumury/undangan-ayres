@@ -5,7 +5,8 @@
       "Bash(npm uninstall:*)",
       "Bash(npx next:*)",
       "Bash(npx tsc:*)",
-      "Bash(curl -sI -L \"https://maps.app.goo.gl/m4yUtfnY2pK8vkPV6\")"
+      "Bash(curl -sI -L \"https://maps.app.goo.gl/m4yUtfnY2pK8vkPV6\")",
+      "Bash(npm run *)"
     ]
   }
 }

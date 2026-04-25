@@ -72,27 +72,27 @@ export default function RSVPForm() {
   }
 
   return (
-    <section id="rsvp" className="scroll-mt-12 bg-gray-lighter px-6 py-24 text-center sm:py-32">
+    <section id="rsvp" className="scroll-mt-12 bg-transparent px-6 py-24 text-center sm:py-32">
       <div className="mx-auto max-w-xl">
-        <p className="font-serif text-sm italic text-gray">
+        <p className="font-serif text-sm italic text-white/50">
           Confirm Your Attendance
         </p>
-        <h2 className="mt-2 font-serif text-4xl text-black sm:text-5xl">
+        <h2 className="mt-2 font-serif text-4xl text-white sm:text-5xl">
           Will You Be There?
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-gray">
+        <p className="mt-4 text-base leading-relaxed text-white/60">
           Be part of the grand opening of Ayres Solo — the home of custom
           jerseys with a cut that&apos;s in a class of its own.
         </p>
         <div className="relative mt-10 inline-block">
           {/* Pulsing ring */}
-          <span className="animate-btn-ring absolute inset-0 rounded-full bg-black" />
+          <span className="animate-btn-ring absolute inset-0 rounded-full bg-white" />
           <button
             onClick={() => setOpen(true)}
-            className="relative overflow-hidden rounded-full bg-black px-14 py-5 text-base font-medium text-white transition-transform hover:scale-103"
+            className="relative overflow-hidden rounded-full bg-white px-14 py-5 text-base font-medium text-black transition-transform hover:scale-103"
           >
             {/* Shimmer sweep */}
-            <span className="animate-btn-shimmer pointer-events-none absolute inset-y-0 w-1/3 bg-white/15 blur-sm" />
+            <span className="animate-btn-shimmer pointer-events-none absolute inset-y-0 w-1/3 bg-black/10 blur-sm" />
             RSVP Now
           </button>
         </div>
