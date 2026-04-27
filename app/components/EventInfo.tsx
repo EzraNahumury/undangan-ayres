@@ -34,7 +34,7 @@ const details = [
       </svg>
     ),
     label: "Voucher",
-    value: "Kupon Diskon 20%",
+    value: "Kupon Diskon 30%",
   },
 ];
 

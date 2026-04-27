@@ -92,9 +92,10 @@ export default function Hero() {
 
         {/* Invitation copy */}
         <p className="animate-fade-rise-delay mt-8 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-          We warmly invite you to celebrate the opening of our Solo branch.
-          Come experience custom jerseys crafted with genuine Indonesian
-          character — where every pattern is a class of its own.
+          We warmly invite you to celebrate the soft opening of our Solo
+          branch. Come and experience custom jerseys crafted with genuine
+          Indonesian character, where every detail reflects quality, every
+          pattern tells a story, and every design stands in a class of its own.
         </p>
 
         {/* Date Badge */}
